@@ -157,3 +157,66 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Unicorn theme animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes rainbow-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.sparkle-animation {
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.twinkle-animation {
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+.rainbow-gradient {
+    background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #a8e6cf, #88d8c0, #c7ceea, #ffc3a0);
+    background-size: 300% 300%;
+    animation: rainbow-shift 4s ease infinite;
+}
+
+/* Enhanced glassmorphism effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Pastel gradient backgrounds */
+.pastel-bg {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ffecd2 50%, #fcb69f 75%, #ffecd2 100%);
+}
+
+.unicorn-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Subtle hover effects for unicorn elements */
+.unicorn-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
